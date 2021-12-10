@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form&İnputs</title>
+</head>
+<body>
+    <form action="">
+    <!--
+    *inputlar yazı yazabildiğimiz parola girebildiğimiz alanlar
+    name labele koyarız tıklandığında textin içine focus lanması için iputta id  alanına name 
+    dersek label ve inputu birbirine bağlamış oluruz
+    * inputun name özelliği var örneğin inputa name="name" özelliğini koyar browser tarafında mustafa murat coşkun
+    olrk doldurursak submit butonu ile gönderirsek PHP tarafında bu name olrak yakalanacaktır-->
+    
+    <label for="name"> Name  &nbsp;&nbsp;&nbsp;&nbsp;:</label>
+    <input type="text" id="name" name="name" placeholder="Name"/><br><br>
+    <label for="email">E-mail  &nbsp;&nbsp;&nbsp;:</label>
+    <input type="email" id="email" name="email"/><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <label for="date">Date  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+    <input type="date" id="date" name="date"><br><br> 
+    <strong>Gender</strong><br>
+    Female
+    <input type="radio" name="gender" value="Female" checked>
+    Male 
+    <input type="radio" name="gender" value="Male">
+    Other 
+    <input type="radio" name="gender" value="Other">
+    <br><br>
+    <!--checkboxda birden fazla seçenek seçebilirken radiolarda sadece 1 adet drçim yapabiliriz
+    ayrıca sayfa açıldığında defoukt olrk içlerinden birinin seçimli halde olmasını istersek seçimli 
+    olmasını istediğimiz item özelliğine checked attiribute sini ekleriz-->
+    <strong>Hobies</strong><br>
+    Music 
+    <input type="checkbox" name="music" id="music" checked>
+    Tecnology
+    <input type="checkbox" name="tec" id="tec">
+    Swimming
+    <input type="checkbox" name="swimming" id="swimming">
+    <br><br>
+
+    <strong>Degree</strong><br>
+    <!--Defoult olrk seçili seçimi değiştirmek için ilgili item optiona  selected ekle -->
+    <select name="degree" id="degree">
+    <option value="bachelor">Bachelor</option>
+    <option value="msc">MSC</option>
+    <option value="phd">PHD</option>
+</select>
+    <br><br>
+    <strong>Message</strong><br>
+    <!-- place holder metodu ile defoult geçici bir mesaj ekleyelim-->
+    <textarea name="message" id="message" cols="25" rows="8" placeholder="Type your message"></textarea>
+    <br><br>
+    <input type="submit" value="Gönder"><!-- submit ile form içeriği başka yere gönderilir
+        /*<button type="submit">Gönder</button>*/ -->
+    <button type="reset">Temizle</button>
+</form>
+</body>
+</html>
